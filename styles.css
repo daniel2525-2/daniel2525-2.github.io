@@ -1,0 +1,143 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    text-align: center;
+    color: #333;
+}
+
+form, #start-day-section, #safe-box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+input, button {
+    padding: 10px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #4cae4c;
+}
+
+#safe-box {
+    position: relative;
+    font-size: 24px;
+    font-weight: bold;
+    background: rgba(0, 0, 255, 0.2); /* Azul traslúcido por defecto */
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    margin: auto;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#safe-box.animate {
+    transform: scale(1.2);
+}
+
+#emoji {
+    font-size: 40px; /* Ajustado el tamaño del emoji */
+}
+
+.expenses {
+    margin-top: 20px;
+}
+
+#expense-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#expense-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+    background: #f9f9f9;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+#expense-list li button {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#expense-list li button:hover {
+    background-color: #c9302c;
+}
+
+.total {
+    text-align: right;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+/* Calendario */
+.calendar-section {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+}
+
+.calendar-icon {
+    font-size: 32px;
+    cursor: pointer;
+}
+
+.calendar-popup {
+    display: none;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    width: 200px;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.calendar-popup p {
+    margin: 5px 0;
+}

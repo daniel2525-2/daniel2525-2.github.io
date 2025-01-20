@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Gastos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gestor de Gastos</h1>
+        
+        <!-- Sección de inicio del día -->
+        <div id="start-day-section">
+            <input type="number" id="start-amount" placeholder="Cantidad inicial" required>
+            <button id="start-day-btn">Empezar Día</button>
+        </div>
+
+        <!-- Icono de caja fuerte con estado de ánimo -->
+        <div id="safe-box">
+            <div id="emoji" class="emoji">😐</div>
+            <span id="current-balance">0</span>
+        </div>
+
+        <!-- Formulario para agregar gastos y ventas -->
+        <form id="expense-form" style="display: none;">
+            <input type="text" id="expense-name" placeholder="Nombre del gasto/venta" required>
+            <input type="number" id="expense-amount" placeholder="Monto" required>
+            <button type="submit">Agregar Gasto</button>
+            <button type="button" id="add-sale-btn">Agregar Venta</button>
+        </form>
+
+        <!-- Lista de gastos -->
+        <div class="expenses">
+            <h2>Lista de Movimientos</h2>
+            <ul id="expense-list"></ul>
+            <div class="total">
+                <strong>Total Gastos:</strong> $<span id="total-expenses">0</span>
+            </div>
+        </div>
+
+        <!-- Botón de cerrar día -->
+        <button id="close-day-btn" style="display: none;">Cerrar Día</button>
+
+        <!-- Calendario que muestra el inicio y cierre del día -->
+        <div id="calendar-section" class="calendar-section" style="display: none;">
+            <div id="calendar-icon" class="calendar-icon">
+                📅
+            </div>
+            <div id="calendar-popup" class="calendar-popup">
+                <h3>Calendario del Día</h3>
+                <p><strong>Fecha:</strong> <span id="calendar-date"></span></p>
+                <p><strong>Inicio del Día:</strong> $<span id="start-of-day-amount">0</span></p>
+                <p><strong>Cierre del Día:</strong> $<span id="end-of-day-amount">0</span></p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>>
